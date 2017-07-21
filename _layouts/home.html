@@ -6,14 +6,16 @@ layout: default
 <div id="wrapper" class="divided">
   <section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
     <div class="content">
-      <div>
+      <div id="headerbox">
         <a class="page-link" href="{{ relative_url }}">Home</a> |
         <a class="page-link" href="{{ base }}/about">About</a> |
+        <a class="page-link" href="{{ base }}/projects">Projects</a> |
+        <a class="page-link" href="{{ base }}/posts">Posts</a>
       </div>
       <h1>Digital Research<br/ > Start-Up Partnerships</h1>
       <p class="major"><!--[-->UCLA Library's digital projects incubator for graduate students and librarians.<!--]--><br />July 13-September 1, 2017</p>
       <ul class="actions vertical">
-        <li><a href="about.html" class="button big wide smooth-scroll-middle">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cfp.html" class="button big wide smooth-scroll-middle">Participate!</a></li>
+        <li><a href="{{ base }}/about" class="button big wide smooth-scroll-middle">About</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cfp.html" class="button big wide smooth-scroll-middle">Participate!</a></li>
       </ul>
     </div>
 
@@ -25,24 +27,5 @@ layout: default
   <div id="footerbox">
       {% include footer.html %}
   </div>
-
-  <!--<h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
 
 </div>
