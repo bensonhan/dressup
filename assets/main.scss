@@ -6,6 +6,13 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 
+/* Overwrite Minima */
+
+    .site-nav {
+        float: left;
+        margin-right: 15px;
+    }
+
 /*
 	Story by HTML5 UP
 	html5up.net | @ajlkn
