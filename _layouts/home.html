@@ -6,7 +6,7 @@ layout: default
   <section class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
     <div class="content">
       <div>
-        <a class="page-link" href="/">Home</a>
+        <a class="page-link" href="{{ relative_url }}">Home</a>
         {% for page in site.pages %}
           <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
         {% endfor %}
