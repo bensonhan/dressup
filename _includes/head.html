@@ -8,7 +8,7 @@
 
   
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ base }}/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ "/assets/font-awesome-4.7.0/css/font-awesome.min.css" | relative_url }}"> 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   
@@ -16,10 +16,10 @@
   {% include google-analytics.html %}
   {% endif %}
 
-  <script src="{{ base }}/assets/js/jquery.min.js"></script>
-  <script src="{{ base }}/assets/js/jquery.scrollex.min.js"></script>
-  <script src="{{ base }}/assets/js/jquery.scrolly.min.js"></script>
-  <script src="{{ base }}/assets/js/skel.min.js"></script>
-  <script src="{{ base }}/assets/js/util.js"></script>
-  <script src="{{ base }}/assets/js/main.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.scrollex.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.scrolly.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/util.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </head>
