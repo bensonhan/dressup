@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div id="wrapper" class="divided">
+    <section class="spotlight style2 orient-left content-orient-left">
+        <div class="content">
+            {% include navbar.html %}
+            <h2>Participants</h2>
+        </div>
+    </section>
+
+    <section class="spotlight style2 orient-left content-orient-left">
+        <div class="content">
+            {% for author in site.data.authors %}
+            <h2>{{ author.display_name }}</h2>
+            {% endfor %}
+        </div>
+    </section>
+</div>
