@@ -9,11 +9,44 @@ layout: default
         </div>
     </section>
 
-    <section class="spotlight style2 orient-left content-orient-left">
+    {% for author in site.data.authors %}
+    <section class="spotlight style2 orient-left content-orient-left image-position-right onscroll-image-fade-in">
         <div class="content">
-            {% for author in site.data.authors %}
             <h2>{{ author.display_name }}</h2>
-            {% endfor %}
+            <ul class="icons">
+                {% if author.twitter %}
+                <li><a href="https://twitter.com/{{ author.twitter }}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                {% endif %}
+                {% if author.github %}
+                <li><a href="https://github.com/{{ author.github }}" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                {% endif %}
+                {% if author.email %}
+                <li><a href="mailto:{{ author.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                {% endif %}
+            </ul>
+            {% if author.blurb %}
+            <p>{{ author.blurb }}</p>
+            {% endif %}
+            <h3>Latest Posts</h3>
+            <ul>
+                {% for post in site.posts limit:3 %}
+                {% if post.author == author.display_name %}
+                <li><h4><a href="{{ post.url }}">{{ post.title }}</a></h4></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="image">
+            {% if author.picture %}
+            <img src="{{ site.baseurl }}/images/{{ author.name }}.jpg">
+            {% else %}
+            <img src="{{ site.baseurl }}/images/colors.jpg">
+            {% endif %}
         </div>
     </section>
+    {% endfor %}
+
+    <div class="footerbox">
+        {% include footer.html %}
+    </div>
 </div>
