@@ -27,7 +27,11 @@ layout: default
             {% if author.blurb %}
             <p>{{ author.blurb }}</p>
             {% endif %}
+            {% for post in site.posts limit:1 %}
+            {% if post.author == author.display_name %}
             <h3>Latest Posts</h3>
+            {% endif %}
+            {% endfor %}
             <ul>
                 {% for post in site.posts limit:3 %}
                 {% if post.author == author.display_name %}
