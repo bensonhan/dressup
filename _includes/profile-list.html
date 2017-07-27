@@ -1,0 +1,53 @@
+<div id="wrapper" class="divided">
+    <section class="spotlight style2 orient-left content-orient-left">
+        <div class="content">
+            {% include navbar.html %}
+            <h2>Participants</h2>
+        </div>
+    </section>
+
+    {% for author in site.data.participants %}
+    <section class="spotlight style2 orient-left content-orient-left image-position-right onscroll-image-fade-in">
+        <div class="content">
+            <h2>{{ author.display_name }}</h2>
+            <ul class="icons">
+                {% if author.twitter %}
+                <li><a href="https://twitter.com/{{ author.twitter }}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                {% endif %}
+                {% if author.github %}
+                <li><a href="https://github.com/{{ author.github }}" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                {% endif %}
+                {% if author.email %}
+                <li><a href="mailto:{{ author.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                {% endif %}
+            </ul>
+            {% if author.blurb %}
+            <p>{{ author.blurb }}</p>
+            {% endif %}
+            {% for post in site.posts limit:1 %}
+            {% if post.author == author.display_name %}
+            <h3>Latest Posts</h3>
+            {% endif %}
+            {% endfor %}
+            <ul>
+                {% for post in site.posts limit:3 %}
+                {% if post.author == author.display_name %}
+                <li><h4><a href="{{ post.url }}">{{ post.title }}</a></h4></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="image">
+            {% if author.picture %}
+            <img src="{{ site.baseurl }}/images/{{ author.name }}.jpg">
+            {% else %}
+            <img src="{{ site.baseurl }}/images/colors.jpg">
+            {% endif %}
+        </div>
+    </section>
+    {% endfor %}
+
+    <div class="footerbox">
+        {% include footer.html %}
+    </div>
+</div>
