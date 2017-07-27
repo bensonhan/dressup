@@ -1,5 +1,5 @@
 ---
-layout: instructors
-title: Instructors
-permalink: /instructors/
+layout: participants
+title: Participants
+permalink: /participants/
 ---

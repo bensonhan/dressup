@@ -6,8 +6,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css"> 
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/minima.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
@@ -21,6 +20,5 @@
   <script src="{{ site.baseurl }}/assets/js/jquery.scrolly.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/util.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </head>
