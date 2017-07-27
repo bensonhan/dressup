@@ -5,4 +5,5 @@ picture:
 twitter:
 github:
 email:
+role: instructor
 ---

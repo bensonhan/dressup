@@ -6,12 +6,12 @@ layout: default
     <section class="spotlight style2 orient-left content-orient-left">
         <div class="content">
             {% include navbar.html %}
-            <h2>Participants</h2>
+            <h2>Instructors</h2>
         </div>
     </section>
 
     {% for person in site.people %}
-    {% if person.role == "participant" %}
+    {% if person.role == "instructor" %}
     <section class="spotlight style2 orient-left content-orient-left">
         <div class="content ">
             <div class="row">
