@@ -14,7 +14,7 @@ layout: default
     <section class="spotlight style2 orient-left content-orient-left">
         <div class="content ">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-4">
                     <div class="image" style="width: 10rem; height: 10rem; display: block; margin: auto;">
                         {% if author.picture %}
                         <img src="{{ site.baseurl }}/images/{{ author.name }}.jpg">
@@ -30,19 +30,18 @@ layout: default
                         {% if author.github %}
                         <li><a href="https://github.com/{{ author.github }}" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
                         {% endif %}
-                        {% if author.email %}
+                         {% if author.email %}
                         <li><a href="mailto:{{ author.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-                        {% endif %}
+                        {% endif %} 
                     </ul>
                 </div>
 
-                <div class="col-md-8">
-                    {% if author.blurb %}
-                    <p>{{ author.blurb }}</p>
-                    {% endif %}
+                <div class="col-8">
                     {% for post in site.posts limit:1 %}
                     {% if post.author == author.display_name %}
                     <h3>Latest Posts</h3>
+                    {% else %}
+                    <h4>Stay tuned for posts by {{ author.display_name }}!</h4>
                     {% endif %}
                     {% endfor %}
                     <ul>
@@ -52,6 +51,10 @@ layout: default
                         {% endif %}
                         {% endfor %}
                     </ul>
+
+                    <!-- {% if author.blurb %}
+                    <p class="blurb">{{ author.blurb }}</p>
+                    {% endif %} -->
                 </div>
             </div>
         </div>
