@@ -13,7 +13,22 @@ layout: default
     {% for author in site.data.participants %}
     <section class="spotlight style2 orient-left content-orient-left">
         <div class="content ">
-            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image" style="width: 10rem; height: 10rem; display: block; margin: auto;">
+                        {% if author.picture %}
+                        <img src="{{ site.baseurl }}/images/{{ author.name }}.jpg">
+                        {% else %}
+                        <img src="{{ site.baseurl }}/images/colors.jpg">
+                        {% endif %}
+                    </div>
+                    <h3 style="text-align: center; padding-top: 15px;">{{ author.display_name }}</h3>
+                </div>
+
+                <div class="col-md-8">
+
+                </div>
+            </div>
         </div>
     </section>
     <!-- <section class="spotlight style2 orient-left content-orient-left image-position-right onscroll-image-fade-in">
