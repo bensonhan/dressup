@@ -11,7 +11,12 @@ layout: default
     </section>
 
     {% for author in site.data.participants %}
-    <section class="spotlight style2 orient-left content-orient-left image-position-right onscroll-image-fade-in">
+    <section class="spotlight style2 orient-left content-orient-left">
+        <div class="content ">
+            
+        </div>
+    </section>
+    <!-- <section class="spotlight style2 orient-left content-orient-left image-position-right onscroll-image-fade-in">
         <div class="content">
             <h2>{{ author.display_name }}</h2>
             <ul class="icons">
@@ -48,7 +53,7 @@ layout: default
             <img src="{{ site.baseurl }}/images/colors.jpg">
             {% endif %}
         </div>
-    </section>
+    </section> -->
     {% endfor %}
 
     <div class="footerbox">
