@@ -39,3 +39,17 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  people:
+    title: People
+    output: true
+    permalink: /:people/:name
+
+defaults:
+  - scope:
+      path: ''
+      type: people
+    values:
+      layout: people
+

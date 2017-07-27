@@ -10,50 +10,50 @@ layout: default
         </div>
     </section>
 
-    {% for author in site.data.participants %}
+    {% for person in site.people %}
     <section class="spotlight style2 orient-left content-orient-left">
         <div class="content ">
             <div class="row">
                 <div class="col-4">
                     <div class="image" style="width: 10rem; height: 10rem; display: block; margin: auto;">
-                        {% if author.picture %}
-                        <img src="{{ site.baseurl }}/images/{{ author.name }}.jpg">
+                        {% if person.picture %}
+                        <img src="{{ site.baseurl }}/images/{{ person.picture }}.jpg">
                         {% else %}
                         <img src="{{ site.baseurl }}/images/colors.jpg">
                         {% endif %}
                     </div>
-                    <h3 style="text-align: center; padding-top: 15px;">{{ author.display_name }}</h3>
+                    <h3 style="text-align: center; padding-top: 15px;"><a href="{{ person.url }}">{{ person.title }}</a></h3>
                     <ul class="icons" style="text-align: center;">
-                        {% if author.twitter %}
-                        <li><a href="https://twitter.com/{{ author.twitter }}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                        {% if person.twitter %}
+                        <li><a href="https://twitter.com/{{ person.twitter }}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
                         {% endif %}
-                        {% if author.github %}
-                        <li><a href="https://github.com/{{ author.github }}" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+                        {% if person.github %}
+                        <li><a href="https://github.com/{{ person.github }}" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
                         {% endif %}
-                         {% if author.email %}
-                        <li><a href="mailto:{{ author.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+                         {% if person.email %}
+                        <li><a href="mailto:{{ person.email }}" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
                         {% endif %} 
                     </ul>
                 </div>
 
                 <div class="col-8">
                     {% for post in site.posts limit:1 %}
-                    {% if post.author == author.display_name %}
+                    {% if post.author == person.title %}
                     <h3>Latest Posts</h3>
                     {% else %}
-                    <h4>Stay tuned for posts by {{ author.display_name }}!</h4>
+                    <h4>Stay tuned for posts by {{ person.title }}!</h4>
                     {% endif %}
                     {% endfor %}
                     <ul>
                         {% for post in site.posts limit:3 %}
-                        {% if post.author == author.display_name %}
+                        {% if post.author == person.title %}
                         <li><h4><a href="{{ post.url }}">{{ post.title }}</a></h4></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
 
-                    <!-- {% if author.blurb %}
-                    <p class="blurb">{{ author.blurb }}</p>
+                    <!-- {% if person.blurb %}
+                    <p class="blurb">{{ person.blurb }}</p>
                     {% endif %} -->
                 </div>
             </div>
