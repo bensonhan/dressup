@@ -1,6 +1,7 @@
 ---
 layout: people
-title: Dawn Childress
+display_name: Dawn Childress
+title:
 picture: 
 twitter: 
 github: kirschbombe

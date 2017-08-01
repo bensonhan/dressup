@@ -44,7 +44,7 @@ collections:
   people:
     title: People
     output: true
-    permalink: /people/:title
+    permalink: /people/:name
 
 defaults:
   - scope:

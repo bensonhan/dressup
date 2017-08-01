@@ -1,6 +1,7 @@
 ---
 layout: people
-title: Benson Han
+display_name: Benson Han
+title: Digital Projects Assistant
 picture: benson_han
 twitter: bensonjaminhan
 github: bensonhan

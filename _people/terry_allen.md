@@ -1,6 +1,7 @@
 ---
 layout: people
-title: Terry Allen
+display_name: Terry Allen
+title:
 picture: 
 twitter: 
 github: 
