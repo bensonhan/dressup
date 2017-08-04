@@ -1,7 +1,7 @@
 ---
 layout: people
 display_name: Dawn Childress
-title:
+title: Instructor
 picture: 
 twitter: 
 github: kirschbombe
