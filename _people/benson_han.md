@@ -7,6 +7,7 @@ twitter: bensonjaminhan
 github: bensonhan
 email: bensonjaminhan@gmail.com
 role: participant
+session:
 ---
 
 ## Biography

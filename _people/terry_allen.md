@@ -7,6 +7,7 @@ twitter:
 github: 
 email: 
 role: participant
+session: summer-17
 ---
 <h2>Biography</h2>
 <p>Terry holds a M.A. in Education Policy from Teachers College, Columbia University and a B.A. in Rhetoric from the University of California, Berkeley. He is currently pursuing a Ph.D. in Urban Schooling from the University of California, Los Angeles.</p>
