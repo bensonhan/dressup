@@ -14,7 +14,7 @@ layout: default
             {% include navbar.html %}
             <h2>Participants</h2>
             {% for class in site.sessions %}
-            <a href="{{ class.url }}" class="button">{{ class.session }}</a>
+            <a href="{{ class.url }}" class="button">{{ class.title }}</a>
             {% endfor %}
         </div>
     </section>
