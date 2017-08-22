@@ -13,5 +13,3 @@ session:
 ## Biography
 
 Benson is a third-year computer science student at the University of California, Los Angeles
-
-Test

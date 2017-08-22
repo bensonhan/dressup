@@ -48,7 +48,7 @@ collections:
   sessions:
     title: Sessions
     output: true
-    permalink: /:name
+    permalink: /participants/:name
 
 # defaults:
 #   - scope:
