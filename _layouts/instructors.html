@@ -23,7 +23,7 @@ layout: default
                         <img src="{{ site.baseurl }}/images/colors.jpg">
                         {% endif %}
                     </div>
-                    <h3 style="text-align: center; padding-top: 15px;"><a href="{{ person.url }}">{{ person.display_name }}</a></h3>
+                    <br>
                     <ul class="icons" style="text-align: center;">
                         {% if person.twitter %}
                         <li><a href="https://twitter.com/{{ person.twitter }}" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
@@ -38,7 +38,8 @@ layout: default
                 </div>
 
                 <div class="col-8">
-                    <h3>Latest Posts</h3>
+                    <h3><a href="{{ person.url }}">{{ person.display_name }}<h4>{{ person.title }}</h4></a></h3>
+                    <p>{{ person.description }}</p>
                     <ul>
                         {% for post in site.posts %}
                             {% if post.author == person.display_name %}

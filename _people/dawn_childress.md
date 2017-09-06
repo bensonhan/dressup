@@ -7,4 +7,5 @@ twitter:
 github: kirschbombe
 email: dchildress@library.ucla.edu
 role: instructor
+description: Hello world!
 ---
